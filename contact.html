@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graham Bites — Contact</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="contact-bg">
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <img src="/Gallery/logo.jpg" alt="Graham Bites Logo">
+      <span>GRAHAM BITES</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="offers.html">Offers</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" class="active">Contacts</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/hero-contact.jpg" alt="Contact Hero" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <span class="hero-badge">Get in Touch</span>
+      <h1>Contact Us</h1>
+      <p class="lead">We'd love to hear from you!</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-page container">
+    <h2 class="text-center">Send Us a Message</h2>
+
+    <div class="contact-info">
+  <h3>Contact Info</h3>
+  <p>Email: airanmaebalinbin@gmail.com</p>
+  <p>Phone: 09708465529 / 09926943690</p>
+  <h3>Visit Us</h3>
+  <p>Brgy. Madamba, Dingras, Ilocos Norte</p>
+
+  <!-- Social Icons -->
+  <div class="contact-social">
+    <a href="https://www.facebook.com/airxn.mxe" target="_blank">
+      <img src="/Gallery/fb.webp" alt="Facebook 1">
+    </a>
+    <a href="https://www.facebook.com/edrian.pascual.2024" target="_blank">
+      <img src="/Gallery/fb.webp" alt="Facebook 2">
+    </a>
+    <a href="https://www.instagram.com/avocadocheesecakeee/" target="_blank">
+      <img src="/Gallery/iggg.webp" alt="Instagram">
+    </a>
+  </div>
+</div>
+
+
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <form action="#" method="post">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Write your message..." rows="6" required></textarea>
+
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Graham Bites — All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

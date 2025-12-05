@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graham Bites — Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-bg">
+
+  <header class="site-header">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">
+        <img src="/Gallery/logo.jpg" alt="Graham Bites Logo">
+        <span>GRAHAM BITES</span>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="offers.html">Offers</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contacts</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Hero" class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <span class="hero-badge">Delicious Delicacies</span>
+        <h1>GRAHAM BITES</h1>
+        <p class="lead">Freshly baked, sweet, and irresistible treats made just for you!</p>
+        <div class="hero-actions">
+          <a class="btn" href="offers.html">See Menu</a>
+          <a class="btn btn-outline" href="#">Order Online</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured container">
+      <h2 class="text-center">Popular Items</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="Gallery/505699137_2369410266767823_6373263333313722994_n.jpg" alt="Mix and Match 1">
+          <div class="card-body">
+            <h3>Mix and Match 1</h3>
+            <p>Classic with a Twist.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Gallery/505868664_2369410436767806_7794701962121585655_n.jpg" alt="Sprinkled Graham">
+          <div class="card-body">
+            <h3>Sprinkled Graham</h3>
+            <p>Sprinkled with a sweet feeling.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="Gallery/506046819_2369410170101166_2438676819851652726_n.jpg" alt="Mix and Match 2">
+          <div class="card-body">
+            <h3>Mix and Match 2</h3>
+            <p>Soft, sweet, and delightful.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> Graham Bites — All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

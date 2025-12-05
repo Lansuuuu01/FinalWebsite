@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graham Bites — About</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="about-bg">
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <img src="/Gallery/logo.jpg" alt="Graham Bites Logo">
+      <span>GRAHAM BITES</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="offers.html">Offers</a>
+      <a href="about.html" class="active">About</a>
+      <a href="contact.html">Contacts</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <span class="hero-badge">Our Journey</span>
+      <h1>About Us</h1>
+      <p class="lead">Baking sweet memories, one graham bite at a time.</p>
+    </div>
+  </section>
+
+  <section class="about-page container">
+    <div class="about-bubble">
+      <h2>Our Story</h2>
+      <p>We started this business back in high school. My friend and I were both business-minded, so we began baking and selling in Grade 10. Now that we’re in college, we’re still growing the same dream we started years ago.</p>
+
+      <h2>Our Values</h2>
+      <p>We believe in using simple ingredients and baking with love. Everything we make is fresh, handmade, and created to bring joy to everyone who tastes it. </p>
+
+      <h2>Why Choose Us?</h2>
+      <p>We make every treat fresh and handcrafted with care. From high school until now, we’ve poured our passion into improving our recipes so you can enjoy delicious baked goods made with love.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Graham Bites — All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>

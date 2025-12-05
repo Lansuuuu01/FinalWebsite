@@ -1,0 +1,186 @@
+:root{ 
+  --bg:#f6f4f2;
+  --accent:#b76b39;
+  --accent-dark:#9b5a2e;
+  --muted:#6c6c6c;
+  --max-width:1100px;
+  --radius:12px;
+  --transition:0.3s ease;
+}
+
+*{ box-sizing:border-box; margin:0; padding:0; }
+body{ font-family:'Poppins', system-ui, Arial; line-height:1.5; color:#222; }
+.container{ max-width:var(--max-width); margin:0 auto; padding:0 20px; }
+.text-center{text-align:center;}
+
+/* Per-page backgrounds */
+body.home-bg { background: url('/Gallery/honey-graham-crackers-studio-portrait-copy-space-background_333547-21701.jpg') no-repeat center/cover fixed; }
+body.offers-bg { background: url('/Gallery/honey-graham-crackers-studio-portrait-copy-space-background_333547-21701.jpg') no-repeat center/cover fixed; }
+body.about-bg { background: url('/Gallery/honey-graham-crackers-studio-portrait-copy-space-background_333547-21701.jpg') no-repeat center/cover fixed; }
+body.contact-bg { background: url('/Gallery/honey-graham-crackers-studio-portrait-copy-space-background_333547-21701.jpg') no-repeat center/cover fixed; }
+
+/* Header */
+.site-header{ background:#fff; border-bottom:1px solid #eee; position:sticky; top:0; z-index:20; }
+.nav-inner{ display:flex; justify-content:space-between; align-items:center; padding:12px 0; }
+.logo{ display:flex; align-items:center; gap:8px; font-weight:700; letter-spacing:1px; color:var(--accent); text-decoration:none; }
+.logo img{ height:50px; width:auto; }
+.main-nav a{ margin-left:16px; text-decoration:none; color:#444; padding:8px 10px; border-radius:8px; transition:var(--transition); }
+.main-nav a.active, .main-nav a:hover{ background:#f3ebe6; color:var(--accent-dark); }
+
+/* Hero Section */
+.hero{ position:relative; height:65vh; min-height:400px; display:flex; align-items:center; overflow:hidden; }
+.hero-bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; filter:contrast(0.95) saturate(0.9); transition:transform 0.5s ease; }
+.hero:hover .hero-bg{ transform:scale(1.05); }
+.hero-overlay{ position:absolute; inset:0; background:linear-gradient(90deg, rgba(183,107,57,0.85) 0%, rgba(183,107,57,0.3) 35%, rgba(0,0,0,0.15) 100%); }
+.hero-content{ position:relative; color:#fff; padding:20px; max-width:600px; }
+.hero-badge{ background:rgba(255,255,255,0.12); display:inline-block; padding:6px 14px; border-radius:999px; font-weight:600; margin-bottom:10px; }
+.hero h1{ font-size:3rem; line-height:1.1; font-weight:800; margin-bottom:15px; transition: transform var(--transition), text-shadow var(--transition); cursor:pointer; }
+.hero h1:hover{ transform:scale(1.1); text-shadow:0 8px 20px rgba(0,0,0,0.25); }
+.hero .lead{ font-size:1rem; margin-bottom:15px; }
+
+/* Buttons */
+.btn{ display:inline-block; padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:600; background:#fff; color:var(--accent-dark); margin-right:12px; transition:var(--transition); }
+.btn:hover{ transform:scale(1.05); box-shadow:0 6px 20px rgba(0,0,0,0.2); }
+.btn-outline{ background:transparent; border:2px solid rgba(255,255,255,0.22); color:#fff; }
+.btn-outline:hover{ background-color:var(--accent); color:#fff; }
+
+/* Cards / Featured Section */
+.featured{ padding:48px 0; }
+.featured h2{ margin-bottom:28px; font-size:2rem; }
+.cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; }
+.card{ background:#fff; border-radius:var(--radius); overflow:hidden; box-shadow:0 6px 16px rgba(0,0,0,0.08); transition:var(--transition); cursor:pointer; }
+.card:hover{ transform:translateY(-6px); box-shadow:0 12px 20px rgba(0,0,0,0.12); }
+.card img{ width:100%; height:180px; object-fit:cover; transition:transform var(--transition); }
+.card:hover img{ transform:scale(1.05); }
+.card-body{ padding:12px; }
+.card-body h3{ margin-bottom:6px; font-size:1.1rem; }
+.card-body p{ color:var(--muted); font-size:0.95rem; }
+
+/* Menu Section */
+.menu-section, .offers-hero{ padding:48px 0; text-align:center; }
+.menu-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+.menu-item{ background:#fff; border-radius:var(--radius); padding:12px; text-align:center; transition:var(--transition); cursor:pointer; }
+.menu-item:hover{ transform:translateY(-4px); box-shadow:0 8px 16px rgba(0,0,0,0.1); }
+.menu-item img{ width:100%; height:180px; object-fit:cover; border-radius:var(--radius); margin-bottom:10px; }
+.menu-item .price{ font-weight:700; color:var(--accent); margin-bottom:6px; }
+.offers-bubble, .about-bubble {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  max-width: 900px;
+  margin: 20px auto;
+}
+
+/* About Section */
+.about-page{ padding:48px 20px; max-width:900px; margin:0 auto; }
+.about-page h1,h2{ margin-bottom:12px; }
+.about-page p{ margin-bottom:12px; line-height:1.6; }
+
+/* Contact Section */
+.contact-page{ padding:48px 20px; max-width:900px; margin:0 auto; }
+.contact-page h1,h2{ margin-bottom:12px; text-align:center; }
+.contact-page p{ margin-bottom:8px; line-height:1.6; }
+
+/* Contact Form Styles */
+.contact-wrapper{ display:flex; gap:40px; flex-wrap:wrap; margin-top:30px; }
+.contact-info, .contact-form{ flex:1; min-width:280px; background:#fff; padding:20px; border-radius:var(--radius); box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+.contact-form form label{ display:block; margin-top:12px; margin-bottom:6px; font-weight:600; }
+.contact-form form input,
+.contact-form form textarea{ width:100%; padding:10px 12px; border-radius:var(--radius); border:1px solid #ccc; margin-bottom:12px; font-family:inherit; }
+.contact-form form button{ padding:12px 24px; background:var(--accent); color:#fff; border:none; border-radius:var(--radius); cursor:pointer; font-weight:600; transition:var(--transition); }
+.contact-form form button:hover{ background:var(--accent-dark); }
+
+/* CTA Section */
+.cta{ padding:40px 20px; background:var(--accent); color:#fff; text-align:center; }
+.cta .btn{ background:#fff; color:var(--accent-dark); }
+.cta .btn:hover{ background:#222; color:#fff; }
+
+/* Footer */
+.site-footer{ padding:20px 0; background:#fff; border-top:1px solid #eee; text-align:center; }
+.site-footer p{ color:#666; font-size:0.9rem; }
+
+/* Modal Popup Styles */
+.modal { display: none; position: fixed; z-index: 50; padding-top: 60px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);}
+.modal-content { margin: auto; display: block; max-width: 80%; max-height: 80%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.5); animation: zoom 0.3s;}
+@keyframes zoom { from {transform:scale(0.7)} to {transform:scale(1)} }
+.close { position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+.close:hover { color: #ccc; }
+/* Modal Popup Styles */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 50; 
+  padding-top: 60px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  animation: zoom 0.3s;
+}
+
+@keyframes zoom { 
+  from {transform:scale(0.7)} 
+  to {transform:scale(1)} 
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.close:hover { color: #ccc; }
+/* Social Icons for Contact Page */
+/* Social Media Icons in Contact Info */
+.contact-social {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+.contact-social a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.contact-social a:hover {
+  transform: scale(1.1);
+}
+
+.contact-social img {
+  width: 40px;  /* size of the icons */
+  height: 40px;
+  object-fit: contain;
+}
+
+
+/* Responsive */
+@media(max-width:880px){
+  .hero h1{ font-size:2.4rem; }
+  .hero{ height:55vh; }
+  .contact-wrapper{ flex-direction:column; }
+}
+@media(max-width:520px){
+  .main-nav a{ margin-left:6px; padding:6px 8px; font-size:0.9rem; }
+  .hero h1{ font-size:2rem; }
+  .hero{ height:50vh; }
+  .hero-actions .btn{ padding:10px 18px; font-size:0.9rem; }
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Graham Bites — Offers & Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="offers-bg">
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo">
+      <img src="/Gallery/logo.jpg" alt="Graham Bites Logo">
+      <span>GRAHAM BITES</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="offers.html" class="active">Offers</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contacts</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="images/hero-offers.jpg" alt="Offers Hero" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <span class="hero-badge">Freshly Made</span>
+      <h1>Our Menu</h1>
+      <p class="lead">Delicious graham treats perfect for every craving!</p>
+      <a href="#" class="btn" id="viewMenuBtn">View Full Menu</a>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section container">
+    <h2 class="text-center">Our Top Picks</h2>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <img src="Gallery/0356b616-87f2-4ad1-a50b-a7887a8b829e.jpg" alt="Chocolate Chip">
+        <h3>Chocolate Chip</h3>
+        <p class="price">₱10</p>
+        <p>Creamy graham balls with chocolatey goodness.</p>
+      </div>
+      <div class="menu-item">
+        <img src="Gallery/48ab84bb-ec18-4b42-ab6e-821eb2ba88f4.jpg" alt="Chocolate Syrup">
+        <h3>Chocolate Syrup</h3>
+        <p class="price">₱10</p>
+        <p>Sweetened graham balls topped with rich chocolate syrup.</p>
+      </div>
+      <div class="menu-item">
+        <img src="Gallery/79f61981-16ed-49da-997d-ab8785363d77.jpg" alt="Sprinkle">
+        <h3>Sprinkle</h3>
+        <p class="price">₱10</p>
+        <p>Soft graham rolls with colorful sprinkles.</p>
+      </div>
+      <div class="menu-item">
+        <img src="Gallery/dfe0ab73-6b16-4956-abcd-d7e0ec16e8f4.jpg" alt="W/Choco Knot">
+        <h3>W/ Choco Knot</h3>
+        <p class="price">₱15</p>
+        <p>Sweet graham balls with a twist of chocolate knot.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <h2>Order Online Now!</h2>
+    <p>Get your favorite graham treats delivered straight to your door.</p>
+    <a href="#" class="btn">Order Online</a>
+  </section>
+
+</main>
+
+<!-- Full Menu Modal -->
+<div id="menuModal" class="modal">
+  <span class="close" id="closeModal">&times;</span>
+  <img class="modal-content" id="modalImg" src="/Gallery/506053578_2369409663434550_7170070608253387276_n.jpg" alt="Full Menu">
+</div>
+
+<footer class="site-footer">
+  <p>&copy; <span id="year"></span> Graham Bites — All rights reserved.</p>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Modal functionality
+  const modal = document.getElementById('menuModal');
+  const btn = document.getElementById('viewMenuBtn');
+  const close = document.getElementById('closeModal');
+
+  btn.onclick = function(e){
+    e.preventDefault();
+    modal.style.display = 'block';
+  }
+
+  close.onclick = function(){
+    modal.style.display = 'none';
+  }
+
+  window.onclick = function(e){
+    if(e.target === modal){
+      modal.style.display = 'none';
+    }
+  }
+</script>
+
+</body>
+</html>
